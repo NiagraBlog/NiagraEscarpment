@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for character set and viewport settings -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Internal CSS styles -->
+  <style>
+    /* Reset some default styles */
+    body, h1, h2, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Apply a box-sizing border-box model to all elements */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Set styles for the body and HTML elements */
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Style for the header section */
+    header {
+      background-color: #333;
+      padding: 15px;
+      text-align: center;
+      color: white;
+    }
+
+    /* Style for the navigation bar */
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #555;
+      overflow: hidden;
+    }
+
+    /* Style for individual navigation links */
+    .tablink {
+      color: white;
+      text-decoration: none;
+      padding: 14px 16px;
+      font-size: 16px;
+      width: 20%;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Style for navigation links on hover */
+    .tablink:hover {
+      background-color: #777;
+    }
+
+    /* Style for content sections */
+    .tabcontent {
+      display: none;
+      padding: 20px;
+    }
+
+    /* Style for h1 elements within content sections */
+    h1 {
+      color: #228B22; /* Forest Green */
+    }
+
+    /* Style for p elements within content sections */
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    /* Style for links within content sections */
+    a {
+      color: #007BFF; /* Royal Blue */
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Style for links on hover */
+    a:hover {
+      color: #0056b3; /* Darker Blue */
+    }
+
+    /* Style for the background color of the body */
+    body {
+      background-color: #f4f4f4;
+      margin: 0;
+    }
+
+    /* Style for images within content sections */
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    /* Style for the video container */
+    .video {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    /* Style for the timeline list */
+    #timeline ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #timeline li {
+      margin-bottom: 10px;
+    }
+
+    /* Style for the contact form */
+    form {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+    quiz {
+      display: none;
+    }
+
+    /* Additional styles for quiz questions */
+    quizForm label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    quizForm input,
+    quizForm button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+    subtitle {
+      color: ghostwhite;
+    }
+  </style>
+</head>
+
+
+<body>
+
+<!-- Header Section -->
+<header>
+  <h1>Niagara Escarpment</h1>
+  <p id ="subtitle">The Stunning and Beautiful unique ecosystem of Ontario.</p>
+</header>
+
+<!-- Navigation Section -->
+<nav>
+  <!-- Navigation Links -->
+  <a class="tablink" href="#" onclick="openPage('intro', this, 'crimson')" id="defaultOpen">Introduction</a>
+  <a class="tablink" href="#" onclick="openPage('history', this, 'burlywood')">History</a>
+  <a class="tablink" href="#" onclick="openPage('ecology', this, 'darkcyan')">Ecology</a>
+  <a class="tablink" href="#" onclick="openPage('protection', this, 'firebrick')">Protection</a>
+  <a class="tablink" href="#" onclick="openPage('quiz', this, 'firebrick')">Quiz</a>
+  <a class="tablink" href="#" onclick="openPage('visitorExperience', this, 'crimson')">Blog/My Journey</a>
+  <a class="tablink" href="#" onclick="openPage('images', this, 'lightcoral')">Gallery</a>
+</nav>
+
+<!-- Introduction Section -->
+<div id="intro" class="tabcontent">
+  <h1>Niagara Escarpment</h1>
+  <p>The Niagara Escarpment is a prominent geological feature that stretches across North America, primarily in the eastern part of the continent. 
+  It is a long, sloping ridge or cliff-like formation that extends from New York, through Ontario, Canada, and into Wisconsin. 
+  The escarpment is characterized by its rugged terrain, limestone cliffs, and lush vegetation, making it a distinctive and ecologically significant landscape feature. Bedrock called dolomite sculpted by constant erosion with water dominates much of the geology of this national park. 
+  These rocks have a large amount of small plants, cedars, lichens and mosses that grow inside and outside the rock face. In addition small algae and fungi grow inside caves sustained by the water of lake Huron.
+  There is also a unique biome sculpted by the unique clash of geology and biology called the alvar that contains over 600 species of plants and many rare or endangered species. 
+  Throughout the Niagra escarpment here is a plethora of endangered animals like the common snapping turtle, the southern flying squirrel and the Jefferson salamandar.</p>
+</div>
+
+<div id="quiz" class="tabcontent">
+  <h2>Test Your Knowledge!</h2>
+  <form id="quizForm">
+    <label for="q1">1. What is the primary geological feature of the Niagara Escarpment?</label>
+    <input type="text" id="q1" name="q1" required>
+
+    <label for="q2">2. In which period did the formation of the Niagara Escarpment begin?</label>
+    <input type="text" id="q2" name="q2" required>
+
+    <label for="q3">3. How many plant species are there in the alvar biome?</label>
+    <input type="number" id="q3" name="q3" required>
+
+    <!-- Additional quiz questions -->
+    <label for="q4">4. What important role does the Niagara Escarpment play in maintaining water quality?</label>
+    <input type="text" id="q4" name="q4" required>
+
+    <label for="q5">5. Name one endangered reptile species mentioned in the ecology section that inhabits the Niagara Escarpment.</label>
+    <input type="text" id="q5" name="q5" required>
+
+    <!-- Button to submit quiz -->
+    <button type="button" onclick="checkQuiz()">Submit</button>
+  </form>
+
+  <!-- Display quiz result -->
+  <p id="quizResult"></p>
+  </div>
+
+
+<!-- History Section -->
+<div id="history" class="tabcontent">
+  <h1>History of the Niagara Escarpment</h1>
+  <p>
+    The rich history of the Niagara Escarpment unfolds over geological epochs, revealing a narrative shaped by ancient seas, glacial forces, Indigenous cultures, European settlement, and ongoing preservation efforts.
+
+    Over 450 million years ago, during the Ordovician Period, the escarpment began its formation as layers of dolomite and limestone accumulated in primordial seas. The ensuing geological processes, including tectonic shifts, sculpted the unique features we see today—steep cliffs, terraced plateaus, and a geological tapestry rich in fossils, showcasing the diverse marine life of epochs past, such as trilobites and brachiopods.
+  </p>
+
+  <p>
+    Turning to human history, the Niagara Escarpment has been a home and cultural nexus for Indigenous peoples for millennia. 
+    The Anishinaabe and Haudenosaunee communities, in particular, have deep connections to the land, relying on its resources for sustenance, spiritual practices, and cultural traditions.
+    The arrival of European settlers in the 17th century marked a transformative period. Settlers established farms, industries, and towns, leaving an indelible mark on the landscape. Notable settlements like Niagara-on-the-Lake and Niagara Falls are living testaments to early European exploration, settlement, and industrialization.
+  </p>
+
+  <p>
+    The 19th century saw the emergence of the Niagara Escarpment as a global attraction. 
+    Its natural beauty, with breathtaking landscapes, waterfalls, and unique geological formations, drew artists, writers, and tourists. 
+    Niagara Falls became an iconic destination, capturing the imagination of people worldwide.
+    As the 20th century unfolded, concerns arose about the preservation of the escarpment's natural and cultural heritage. 
+    Recognizing its significance, the Niagara Escarpment Commission was established in 1973 in Ontario, playing a pivotal role in managing and safeguarding the escarpment's unique features.
+  </p>
+
+  <p>
+    Beyond its geological and cultural significance, the escarpment is entwined with Indigenous treaties. 
+    In 1836, the Saugeen Ojibway signed a treaty with Sir Francis Bond Head, ceding lands in exchange for promises of agricultural education, proper housing, and permanent protection of the peninsula. 
+    Subsequent treaties in 1854 and ongoing land claims reflect a complex history of interactions between Indigenous communities and the Canadian government.
+  </p>
+
+  <p>
+    Today, the Niagara Escarpment stands as a testament to the intricate interplay of geological forces, human history, and conservation efforts. 
+    Its designation as a UNESCO World Biosphere Reserve underscores its global ecological importance, while ongoing initiatives aim to balance preservation with responsible land use.
+  </p>
+  <a href="https://www.niagarafrontier.com" target="_blank">Learn more about the geological origins of the Niagara Escarpment.</a>
+  <a href="https://www.acer-acre.ca/resources/climate-change-in-context/the-past/impacts/impacts-on-lithosphere-land/niagara-escarpment-glaciation." target="_blank">Explore the impacts of glaciation on the Niagara Escarpment.</a>
+  <a href="https://www.giantsrib.ca/escarpment-origins-ancient-seas-and-fossils/." target="_blank">Discover the ancient seas and fossils that contribute to the escarpment's history.</a>
+</div>
+
+
+
+
+
+<!-- Ecology Section -->
+<div id="ecology" class="tabcontent">
+  <h1>Ecological History of the Niagara Escarpment</h1>
+  <p>The ecological history of the Niagara Escarpment is a captivating tale of nature's ingenuity, intricately woven through ancient geological formations and evolving ecosystems over millions of years. This extraordinary landscape, shaped by geological processes and climatic shifts, stands as a testament to the resilience and adaptability of life.
+  <br>Spanning across millennia, the limestone cliffs and terraced plateaus of the escarpment serve as a dynamic canvas for ecological evolution. T
+  he geological composition, rich in dolomite and limestone, profoundly influences the region's vegetation. Erosion and weathering have sculpted these rocks, creating niches that host a diverse array of plant species. 
+  Among them, small plants, cedars, lichens, and mosses thrive, contributing to the unique biodiversity of the area. The delicate interplay of these elements has given rise to specialized microhabitats, such as the alvar biome, a sanctuary for over 600 plant species, many of which are rare or endangered.
+  <br>Beneath the surface, within caves and crevices formed by the escarpment's geological features, a hidden world thrives. Small algae and fungi find sustenance in the moisture seeping through from Lake Huron, forming an intricate ecosystem within the rock formations. This hidden world plays a crucial role in the overall balance of life on the escarpment.
+  <br>The Niagara Escarpment is not merely a static landscape; it is a living record of adaptation and resilience. The interconnectedness of geology and biology creates a delicate balance, sustaining both common and rare species. Every element, from the ancient bedrock to the smallest organism, contributes to the intricate web of life on the Niagara Escarpment.
+  </p>
+  <p>Exploring the escarpment's ecological wonders reveals a myriad of fascinating stories. Endangered species, such as the common snapping turtle, the southern flying squirrel, and the Jefferson salamander, find refuge in the diverse habitats provided by this unique landscape. Their presence emphasizes the ecological significance of the escarpment and the need for its preservation.
+  </p>
+  <p>For further exploration of the ecological history of the Niagara Escarpment, you can visit the following resources:
+    <br><a href="https://www.niagarafrontier.com/origins.html" target="_blank">Niagara Frontier - Ecological Origins</a>
+    <br><a href="https://www.acer-acre.ca/resources/climate-change-in-context/the-past/impacts/impacts-on-lithosphere-land/niagara-escarpment-glaciation" target="_blank">ACER - Climate Change and Niagara Escarpment</a>
+    <br><a href="https://www.giantsrib.ca/escarpment-origins-ancient-seas-and-fossils/" target="_blank">Giant's Rib - Escarpment Origins and Fossils</a>
+  </p>
+</div>
+
+<div id="protection" class="tabcontent">
+  <h1>Why Protect the Escarpment?</h1>
+  <p>The Niagara Escarpment is a geological wonder and a natural treasure that stretches for approximately 725 kilometers (450 miles) through Ontario, Canada, and the northern United States. 
+  It is a region of immense ecological, cultural, and geological significance, making it imperative to protect and preserve this unique natural feature for current and future generations.
+  First and foremost, the Niagara Escarpment is home to a rich and diverse ecosystem. 
+  Its forests, wetlands, and limestone cliffs provide habitat for a wide range of plant and animal species, some of which are rare and endangered. 
+  Protecting the escarpment ensures the conservation of these species and maintains the overall biodiversity of the region. The escarpment's natural habitats also play a critical role in maintaining water quality and regulating local climate patterns, benefiting both wildlife and nearby communities. 
+  <br>Culturally, the Niagara Escarpment has profound significance. Indigenous peoples have inhabited this area for thousands of years and continue to have strong cultural connections to the land. 
+  It is important to respect and protect the cultural heritage of Indigenous communities by preserving the escarpment. 
+  Additionally, the escarpment has historical value as it has been a source of inspiration for artists and writers and a site of geological study for centuries. Geologically, the Niagara Escarpment is a living record of Earth's history. 
+  It showcases an impressive array of rock formations, fossils, and geological features that provide insights into the planet's past. 
+  Protecting the escarpment ensures that these valuable geological resources remain accessible for scientific research and educational purposes. 
+  The Niagara Escarpment also serves as a recreational and tourism destination, drawing millions of visitors each year. Its scenic beauty, hiking trails, and outdoor activities contribute significantly to the local economy. By safeguarding the escarpment, we support sustainable touris
+  m and economic growth in the region. 
+  <br> Moreover, the Niagara Escarpment is a source of clean drinking water for millions of people. 
+  Its limestone formations act as natural filters, purifying groundwater that feeds into rivers and lakes. Protecting the escarpment is essential to ensure a continued supply of clean water for both urban and rural communities. 
+  In conclusion, the Niagara Escarpment is a unique and irreplaceable natural feature that should be protected for its ecological, cultural, geological, recreational, and economic values. 
+  Preserving this natural wonder ensures the conservation of biodiversity, respect for Indigenous cultures, scientific discovery, sustainable tourism, and the availability of clean water. By safeguarding the Niagara Escarpment, we are not only benefiting ourselves but also acting as stewards of the land for future generations to appreciate and enjoy.</p>
+</div>
+
+<div id="visitorExperience" class="tabcontent">
+  <h1>Summer 2023-Summer 2024</h1>
+  <p>
+    Over the past year, I have had the incredible personal opportunity to immerse myself in the wonders of the Niagra Escarpment,
+    exploring the beautiful landscapes of the Bruce Peninsula, hiking along the  Bruce Trail, traversing
+    Mono Cliffs national park, travelling to some of the local communities nearby and travelling throughout Ontario.
+  </p>
+
+  <!-- Bruce Peninsula -->
+  <h2>Bruce Peninsula</h2>
+  <p>
+    The Bruce Peninsula is gorgeous. The water is so clear, and the cliffs make you feel tiny. I hiked around the section of the bruce trail and
+    stumbled upon a enormous number of unique animal and plant species I had never seen before. There's a peacefulness about the peninsula that's hard to put into words. The workers in the park and the locals were all very friendly and told me about the history and unique ecology of the park 
+  </p>
+
+  <!-- Bruce Trail -->
+  <h2>Hiking the Bruce Trail</h2>
+  <p>
+    A summer ago, I decided to tackle some large sections of the Bruce Trail. It's a long walk, but you see a bit of everything. From thick woods to open
+    fields, and some nice waterfalls along the way. It's challenging, but the views make every step worth it. Someday I hope to complete it all.
+  </p>
+
+  <!-- Mono Cliffs -->
+  <h2>Traversing the Mono Cliffs</h2>
+  <p>
+    I also frequently travelled Mono cliffs. For the past several years it's been an oasis to me. A sheltered piece of the world I can return to again and again. It's not a big park, but it's got this quiet charm. The trails wind through hills and rocks, and you feel like you're in a peaceful corner of nature. A hidden spot that not everyone knows about. This park and the trail and hikes that lay on it inspired me to create this website to share the beauty of these places in the escarpment to others. 
+  </p>
+
+  <h2>Volunteering</h2>
+  <p>
+    Updating
+  </p>
+
+</div>
+
+<!-- Gallery Section -->
+<div id="images" class="tabcontent">
+  <h1>Image Gallery</h1>
+  <p>Explore the beauty of the Niagara Escarpment through these stunning images:</p>
+  <div class="gallery">
+    <img src="download-2.jpg" alt="Caption 1" class="img-fluid">>
+    <img src="download.jpg" alt="Caption 1" class="img-fluid">>
+    <img src="falls.jpg" alt="Niagara Falls" class="img-fluid">
+    <img src="brucefalls.jpg" alt="Bruce Falls" class="img-fluid">
+  </div>
+</div>
+
+
+<!-- Fun Facts Section -->
+<div id="funfacts" class="tabcontent">
+  <h1>Fun Facts and more information</h1>
+  <p>Discover some fascinating facts about the Niagara Escarpment:</p>
+  <ul>
+    <!-- List of fun facts -->
+    <li>The Niagara Escarpment is a UNESCO World Biosphere Reserve.</li>
+    <li>It is home to several species of orchids, some of which are rare and endangered.</li>
+    <li>The escarpment has been featured in literature, including works by famous authors.</li>
+    <li>During the fall, the escarpment's forests showcase vibrant foliage, attracting photographers and nature enthusiasts.</li>
+    <li>The Bruce Trail, running along the Niagara Escarpment, is one of the longest continuous footpaths in Canada.</li>
+    <li>The escarpment's limestone cliffs provide habitat for unique plant species adapted to alkaline conditions.</li>
+    <li>The Niagara Escarpment is a popular destination for rock climbing enthusiasts.</li>
+    <li>It influenced the creation of several waterfalls, including the famous Niagara Falls.</li>
+    <li>The escarpment is a crucial migratory route for birds, including hawks and songbirds.</li>
+    <li>Some sections of the escarpment are designated as nature reserves to protect rare flora and fauna.</li>
+    <li>The escarpment played a role in the development of the Great Lakes.</li>
+    <li>The limestone rock of the escarpment has unique geological formations and caves.</li>
+    <li>It has inspired artists, writers, and environmentalists for centuries.</li>
+    <li>The Niagara Escarpment Commission, established in 1973, manages and protects the escarpment in Ontario.</li>
+    <li>The escarpment is home to a rich and diverse ecosystem, supporting various plant and animal species.</li>
+    <li> Indigenous peoples have a deep spiritual and cultural connection to the escarpment, dating back thousands of years.</li>
+    <li>The escarpment's natural habitats play a critical role in maintaining water quality and regulating local climate patterns.</li>
+    <li>It serves as a source of clean drinking water for millions of people, with its limestone formations acting as natural filters.</li>
+    <li>Preserving the Niagara Escarpment ensures the conservation of biodiversity, respect for Indigenous cultures, scientific discovery, sustainable tourism, and the availability of clean water.</li>
+  </ul>
+  <h1>PDF Document</h1>
+  <p>Explore detailed information about the Niagara Escarpment in this PDF document:</p>
+  <embed src="Resources for Ayden.pdf" type="application/pdf" width="100%" height="600px">
+</div>
+
+
+<!-- JavaScript Section -->
+<script>
+  // Function to open content pages
+  function openPage(pageName, elmnt, color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  var defaultOpenElement = document.getElementById("defaultOpen");
+  if (defaultOpenElement) {
+    defaultOpenElement.click();
+  } else {
+    console.error("Element with id 'defaultOpen' not found.");
+  }
+
+  // Function to check the quiz
+  function checkQuiz() {
+    // Get user responses
+    var q1Response = document.getElementById("q1").value.trim().toLowerCase();
+    var q2Response = document.getElementById("q2").value.trim().toLowerCase();
+    var q3Response = parseInt(document.getElementById("q3").value);
+    var q4Response = document.getElementById("q4").value.trim().toLowerCase();
+    var q5Response = document.getElementById("q5").value.trim().toLowerCase();
+
+    // Correct answers
+    var correctAnswers = {
+      q1: "limestone cliffs",
+      q2: "ordovician",
+      q3: 600,
+      q4: "water filtration",
+      q5: "common snapping turtle"
+    };
+
+    // Check answers
+    var correctCount = 0;
+    if (q1Response === correctAnswers.q1) correctCount++;
+    if (q2Response === correctAnswers.q2) correctCount++;
+    if (q3Response === correctAnswers.q3) correctCount++;
+    if (q4Response === correctAnswers.q4) correctCount++;
+    if (q5Response === correctAnswers.q5) correctCount++;
+
+    // Display result
+    var resultMessage = "You got " + correctCount + " out of 5 questions correct!";
+    document.getElementById("quizResult").innerHTML = resultMessage;
+  }
+</script>
+   
+</body>
+
+</html>
